@@ -373,7 +373,11 @@ datum
 						M.nutrition = max(M.nutrition-fat_to_burn,0)
 				..(M)
 				return
-
+				if(holder.has_reagent("super_cholesterol"))
+					holder.remove_reagent("cholesteronium", 8)
+				if(holder.has_reagent("cholesterol"))
+					holder.remove_reagent("cholesteronium", 8)
+				return
 			reaction_blob(var/obj/blob/B, var/volume)
 				if (istype(B, /obj/blob/lipid))
 					B.take_damage(B.health_max, 2, "chaos")
@@ -1784,9 +1788,9 @@ datum
 						bleed(H, damage * 2, damage)
 						//TODO: Blood
 						
-		super_cholesterol
-			name = "super cholesterol"
-			id = "super_cholesterol"
+		cholesteronium
+			name = "cholesteronium"
+			id = "cholesteronium"
 			description = "It is so greasy it is almost another state of matter"
 			reagent_state = LIQUID
 			fluid_r = 206
