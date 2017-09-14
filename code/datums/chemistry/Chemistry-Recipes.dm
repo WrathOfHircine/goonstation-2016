@@ -2704,4 +2704,14 @@ datum
 			result_amount = 1
 			mix_phrase = ".ylegnarts dnuora lriws ot snigeb erutxim ehT"
 			mix_sound = 'sound/misc/drinkfizz.ogg'
+
+		super_cholesterol
+			name = "Super Cholesterol"
+			id = "super_cholesterol"
+			result = "super_cholesterol"
+			required_reagents =list ("dna_mutagen"=1, "cholesterol"=2, "cola"= 1,"porktonium"=1, )
+			required_temperature = T0C + 456
+			result_amount = 1
+			mix_phrase = "The mixture begins to bubble and gives of the smell of bacon."
+
 #undef get_fucked_clarks
