@@ -2361,3 +2361,30 @@ datum
 				M.bioHolder.AddEffect("reversed_speech", timeleft = 180)
 				..(M)
 				return
+
+		super_cholesterol
+			name = "super cholesterol"
+			id = "super_cholesterol"
+			description = "It is so greasy it is almost another state of matter"
+			reagent_state = LIQUID
+			fluid_r = 206
+			fluid_g = 187
+			fluid_b = 107
+			transparency = 255
+			depletion_rate = 0.8
+			
+			reaction_mob(var/mob/M, var/method=TOUCH, var/volume_passed)
+				src = null
+				if (!ishuman(M))
+
+				M.bioHolder.AddEffect("fat")
+
+			on_mob_life(var/mob/M)
+				if(!M) M = holder.my_atom
+				M.bioHolder.AddEffect("fat")
+				..(M)
+				return
+			on_mob_life(var/mob/M)
+				if (prob(30))
+					M.reagents.add_reagent("cholesterol", rand(10,20))
+				return
