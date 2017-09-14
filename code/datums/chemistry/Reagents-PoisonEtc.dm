@@ -1783,3 +1783,31 @@ datum
 						H.TakeDamage(zone="All", brute=damage)
 						bleed(H, damage * 2, damage)
 						//TODO: Blood
+						
+		super_cholesterol
+			name = "super cholesterol"
+			id = "super_cholesterol"
+			description = "It is so greasy it is almost another state of matter"
+			reagent_state = LIQUID
+			fluid_r = 206
+			fluid_g = 187
+			fluid_b = 107
+			transparency = 255
+			depletion_rate = 0.1
+			var/counter = 1
+			
+			pooled()
+				..()
+				counter = 1
+				
+			reaction_mob(var/mob/M, var/method=TOUCH, var/volume_passed)
+				if (!counter) counter = 1
+				switch(counter++)
+					if (1 to 5)
+						return
+					if (5 to INFINITY)
+						M.bioHolder.AddEffect("fat")
+			on_mob_life(var/mob/M)
+				if (prob(30))
+					M.reagents.add_reagent("cholesterol", rand(2,3))
+				return
