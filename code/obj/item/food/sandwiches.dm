@@ -186,6 +186,11 @@
 	name = "assburger"
 	desc = "This burger gives off an air of awkwardness."
 	icon_state = "assburger"
+	initial_volume = 15
+
+	New()
+		..()
+		reagents.add_reagent("fartonium", 30)
 
 /obj/item/reagent_containers/food/snacks/burger/heartburger
 	name = "heartburger"
