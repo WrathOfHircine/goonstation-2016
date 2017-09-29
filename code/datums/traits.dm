@@ -541,7 +541,7 @@
 	name = "Half Monkey (-2)"
 	cleanName = "Half Monkey"
 	desc = "You can understand monkeys. No, You aren't litteraly half monkey."
-	points = 2
+	points = -2
 	isPositive = 1
 	category = "genetics"
 	onAdd(var/mob/owner)
