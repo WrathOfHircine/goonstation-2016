@@ -536,7 +536,23 @@
 	id = "clutz"
 	points = 2
 	isPositive = 0
-
+	
+/obj/trait/halfmonkey
+	name = "Half Monkey (-2)"
+	cleanName = "Half Monkey"
+	desc = "You can understand monkeys. No, You aren't litteraly half monkey."
+	points = 2
+	isPositive = 1
+	category = "genetics"
+	onAdd(var/mob/owner)
+		if(owner.bioHolder)
+			owner.bioHolder.AddEffect("monkey_speak")
+		return
+	onLife(var/mob/owner) //I assume this is what makes it unremovable
+		if(owner.bioHolder && !owner.bioHolder.HasEffect("monkey_speak"))
+			owner.bioHolder.AddEffect("monkey_speak")
+		return
+	
 /obj/trait/leftfeet
 	name = "Two left feet (+1)"
 	cleanName = "Two left feet"
