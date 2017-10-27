@@ -373,7 +373,7 @@ datum
 						M.nutrition = max(M.nutrition-fat_to_burn,0)
 				..(M)
 				return
-				if(holder.has_reagent("super_cholesterol"))
+				if(holder.has_reagent("cholesteronium"))
 					holder.remove_reagent("cholesteronium", 8)
 				if(holder.has_reagent("cholesterol"))
 					holder.remove_reagent("cholesteronium", 8)
@@ -1809,7 +1809,7 @@ datum
 				switch(counter++)
 					if (1 to 5)
 						return
-					if (5 to INFINITY)
+					if (6 to INFINITY)
 						M.bioHolder.AddEffect("fat")
 			on_mob_life(var/mob/M)
 				if (prob(30))
