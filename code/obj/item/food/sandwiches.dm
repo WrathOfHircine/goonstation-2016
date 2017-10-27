@@ -190,7 +190,7 @@
 
 	New()
 		..()
-		reagents.add_reagent("fartonium", 30)
+		reagents.add_reagent("fartonium", 10)
 
 /obj/item/reagent_containers/food/snacks/burger/heartburger
 	name = "heartburger"
