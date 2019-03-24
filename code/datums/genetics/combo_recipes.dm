@@ -193,13 +193,25 @@
 /datum/geneticsrecipe/bigpuke_two
 	required_effects = list("cough","stinky")
 	result = /datum/bioEffect/power/bigpuke
-
+	
+/datum/geneticsrecipe/bigpuke_three
+	required_effects = list("sneeze","drunk")
+	result = /datum/bioEffect/power/bigpuke
+	
+/datum/geneticsrecipe/bigpuke_four
+	required_effects = list("sneeze","stinky")
+	result = /datum/bioEffect/power/bigpuke
+	
 /datum/geneticsrecipe/ink_one
 	required_effects = list("ithillid","melanism")
 	result = /datum/bioEffect/power/ink
 
 /datum/geneticsrecipe/ink_two
 	required_effects = list("ithillid","shiny")
+	result = /datum/bioEffect/power/ink
+	
+/datum/geneticsrecipe/ink_three
+	required_effects = list("ithillid","sneeze")
 	result = /datum/bioEffect/power/ink
 
 /datum/geneticsrecipe/photokinesis // Discovered
