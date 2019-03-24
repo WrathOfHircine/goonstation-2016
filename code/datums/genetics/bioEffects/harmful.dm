@@ -247,6 +247,26 @@
 				return
 		return
 
+/datum/bioEffect/sneeze
+	name = "Chronic Sneezing"
+	desc = "Enhances the sensitivity of nerves in the subject's nose, causing periodic sneezing."
+	id = "sneeze"
+	probability = 66
+	effectType = effectTypeDisability
+	isBad = 1
+	msgGain = "You feel an irritating itch in your nose."
+	msgLose = "Your nose clears up."
+	reclaim_fail = 15
+
+	OnLife()
+		if (owner.stat == 2)
+			return
+		if ((prob(5)))
+			spawn (0)
+				owner:emote("sneeze")
+				return
+		return
+
 #define LIMB_IS_ARM 1
 #define LIMB_IS_LEG 2
 /datum/bioEffect/funky_limb
